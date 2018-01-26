@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_root_portrait"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="horizontal" >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/video_parent_portrait"
+        android:background="@android:color/transparent">
+
+        <SurfaceView
+            android:id="@+id/video_portrait"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:fitsSystemWindows="true" />
+
+        <LinearLayout
+            android:id="@+id/video_loading_portrait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:id="@+id/video_loading_progress_portrait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--<TextView
+                android:id="@+id/video_loading_text_portrait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="7.0dip"
+                android:text="@string/video_layout_loading"
+                android:textColor="@android:color/white"
+                android:textSize="20.0sp" />-->
+        </LinearLayout>
+    </FrameLayout>
+    <include layout="@layout/video_controller_portrait" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/video_parent_portrait">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_alignBottom="@id/video_portrait"
+    android:id="@+id/video_controller_portrait_layout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/video_controller_portrait" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/centerCtrl"
+            android:background="@color/media_controller_bg"
+            android:layout_centerInParent="true"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/video_controller_last"
+                    android:src="@drawable/video_controller_next"
+                    android:background="@color/transparent"
+                    android:visibility="invisible"
+                    android:scaleType="centerInside"
+                    />
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/video_controller_play_pause"
+                    android:src="@drawable/video_controller_pause"
+                    android:background="@color/transparent"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="30dp"
+                    />
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/video_controller_next"
+                    android:src="@drawable/video_controller_next"
+                    android:background="@color/transparent"
+                    android:scaleType="centerInside"
+                    android:layout_marginLeft="30dp"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/video_controller_top"
+            android:background="@color/media_controller_bg"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/video_controller_portrait_title"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:maxLines="1"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/video_controller_bottom"
+            android:background="@color/media_controller_bg"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <android.support.v7.widget.AppCompatSeekBar
+                    android:id="@+id/video_controller_seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:progress="10"
+                    android:progressTint="@color/colorPrimary"
+                    android:secondaryProgress="15"
+                    android:secondaryProgressTint="@color/white"
+                    android:thumbTint="@color/white" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

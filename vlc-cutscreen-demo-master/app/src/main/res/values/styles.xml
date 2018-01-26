@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--<item name="android:windowFullscreen">true</item>-->
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    //自定义把actionBar去掉，以及title
+    <style name="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="VideoTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- 音量调节seekbar -->
+    <style name="Widget.SeekBar.Normal" parent="@android:style/Widget.SeekBar">
+        <item name="android:maxHeight">3.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:minHeight">3.0dip</item>
+        <item name="android:thumbOffset">0dip</item>
+        <item name="android:progressDrawable">@drawable/seekbar_define_color_style</item>
+    </style>
+
+</resources>
